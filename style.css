@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* Body */
+body{
+    background:linear-gradient(-45deg,#ff9ecf,#e1167f,#6a0f58,#67e8f9);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    color:white;
+}
+
+/* Background Animation */
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Navigation */
+nav{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38032b;
+}
+
+/* Hero Section */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+    padding:50px;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.hero-text h1{
+    font-size:60px;
+}
+
+.hero-text span{
+    color:#ff1493;
+}
+
+.hero-text h2{
+    margin:15px 0;
+    color:#ffffff;
+}
+
+.hero-text p{
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* Profile Image */
+.hero-image img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    transition:.5s;
+    box-shadow:
+        0 0 20px #ff69b4,
+        0 0 40px #87cefa,
+        0 0 60px #ffb6c1;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+/* Button */
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff69b4,#60a5fa);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #ff69b4;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+/* Glass Cards */
+.about-card,
+.contact-card,
+.project-card{
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
+}
+
+/* Skills */
+.skill-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill{
+    padding:15px 35px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff69b4,#60a5fa);
+    transition:.4s;
+    font-weight:500;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 15px white;
+}
+
+/* Projects */
+.project-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.project-card{
+    width:320px;
+    text-align:center;
+    transition:.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:
+        0 0 20px #ff69b4,
+        0 0 40px #b10d7a;
+}
+
+.project-card h3{
+    color:#130241;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    line-height:1.7;
+}
+
+/* Contact */
+.contact-card{
+    text-align:center;
+}
+
+.contact-card p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(255,255,255,0.15);
+    margin-top:40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
+    }
+
+    section h2{
+        font-size:34px;
+    }
+
+    .project-card{
+        width:100%;
+    }
+}
